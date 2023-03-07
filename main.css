@@ -1,0 +1,39 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+p {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+details {
+  padding-top: 7px;
+  padding-bottom: 21px;
+}
+
+.abstract {
+  font-size: 0.90rem;
+}
+
+.button-container {
+    text-align: left;
+	padding-top: 10px;
+	padding-bottom: 60px;
+  }
+  
+.container {
+	display: grid;
+	align-items: center; 
+	grid-template-columns: 1fr 3fr;
+	column-gap: 1px;
+}

@@ -11,6 +11,11 @@ body {
   font-style: normal;
 }
 
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
 p {
   padding-top: 7px;
   padding-bottom: 7px;
@@ -36,4 +41,32 @@ details {
 	align-items: center; 
 	grid-template-columns: 1fr 3fr;
 	column-gap: 1px;
+}
+
+section {
+  width:500px;
+  float:right;
+  padding-bottom:50px;
+}
+
+.wrapper {
+  width:860px;
+  margin:0 auto;
+}
+
+@media screen and (max-width: 800px){
+	
+	body {
+		max-width: none;
+		padding: 30px;
+	}
+	
+	.container {
+		display: grid;
+		align-items: center; 
+		grid-template-columns: 1fr;
+		grid-template-rows: auto auto:
+		column-gap: 1px;
+	}
+	
 }

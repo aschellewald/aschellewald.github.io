@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Contact - Andreas Schellewald</title>
+		<link rel="stylesheet" href="../css/main.css">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	</head>
+	<body>
+		<div>
+
+            <h1>Contact - Andreas Schellewald</h1>
+
+            <p>You can reach me via email using the form below or by directly sending me an email to: aschellewald [at] acm [dot] org</p>
+
+            <form id="contact-form" class="contact-form">
+                <label for="subject">Subject:</label>
+                <input type="text" id="subject" placeholder="">
+
+                <label for="msg">Message:</label>
+                <textarea id="msg" rows="8" maxlength="1000" placeholder=""></textarea>
+
+                <div class="meta">
+                    <span id="count">0 / 1000 characters</span>
+                    <input type="submit" value="Send">
+                </div>
+            </form>
+
+            <script>
+                const form = document.getElementById("contact-form");
+                const subject = document.getElementById("subject");
+                const msg = document.getElementById("msg");
+                const counter = document.getElementById("count");
+
+                msg.addEventListener("input", function () {
+                    counter.textContent = msg.value.length + " / 1000 characters";
+                });
+
+                form.addEventListener("submit", function (e) {
+                e.preventDefault();
+
+                let subjectText = subject.value.trim();
+                let bodyText = msg.value.trim();
+
+                if (!subjectText) {
+                    subjectText = "Website Contact";
+                }
+
+                const mailto =
+                    "mailto:aschellewald@acm.org" +
+                    "?subject=" + encodeURIComponent(subjectText) +
+                    "&body=" + encodeURIComponent(bodyText);
+
+                window.location.href = mailto;
+                });
+            </script>
+
+		</div>
+		<div>
+            <br>
+            <br>
+            <br>
+			<hr>
+			<div class="button-container">
+				<button onclick="window.location.href='../index.html'">About</button>
+				<button onclick="window.location.href='./publications.html'">Publications</button>
+				<button onclick="window.location.href='./presentations.html'">Presenations</button>
+				<button onclick="window.location.href='./contact.html'">Contact</button>
+				<button onclick="window.open('https://mastodon.social/@qonto', '_blank')">Mastodon</button>
+				<button onclick="window.open('https://scholar.google.com/citations?user=lTaerP4AAAAJ', '_blank')">Google Scholar</button>
+			</div>
+		</div>
+	</body>
+</html>

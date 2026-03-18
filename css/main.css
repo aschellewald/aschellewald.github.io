@@ -1,0 +1,183 @@
+body {
+  font-family: 'Open Sans', sans-serif;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+footer {
+  padding-bottom: 40px;
+}
+
+@font-face {
+  font-family: 'Open Sans';
+  src: url('fonts/OpenSans-Regular.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+@viewport {
+  width: device-width ;
+  zoom: 1.0 ;
+}
+
+p {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+details {
+  padding-top: 7px;
+  padding-bottom: 21px;
+}
+
+h2 {
+  padding-top: 21px;
+}
+
+.abstract {
+  font-size: 0.90rem;
+}
+
+.button-container {
+  text-align: left;
+	padding-top: 10px;
+	padding-bottom: 60px;
+  }
+  
+
+section {
+  width:500px;
+  float:right;
+  padding-bottom:50px;
+}
+
+.wrapper {
+  width:860px;
+  margin:0 auto;
+}
+
+.header-container {
+  display: flex;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.header-image {
+  order: 1;
+  flex-shrink: 0;
+}
+
+.header-text {
+  order: 2;
+}
+
+.header-image img {
+  display: block;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.25);
+  border-radius: 50%;
+}
+
+.headline {
+  margin: 0;
+  font-size: 32px;
+  line-height: 1.3;
+  display: flex; 
+  align-items: center;
+}
+
+.emoji {
+    font-size: 64px;
+    margin-right: 15px;
+}
+
+@media screen and (max-width: 768px) {
+	
+	body {
+		max-width: none;
+		padding: 20px;
+	}
+	
+    .header-container {
+        flex-direction: column;
+        gap: 60px;
+    }
+
+    .header-text {
+        order: 1;
+    }
+
+    .header-image {
+        order: 2;
+    }
+    
+    .headline {
+        font-size: 24px;
+        justify-content: center; 
+    }
+
+    .emoji {
+        font-size: 48px;
+    }
+}
+
+.list-page ol {
+  list-style-position: outside;
+  margin: 0;
+  padding-left: 30px;
+}
+
+.list-page li {
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+
+.list-page ol.timeline li.year {
+  list-style: none;
+  font-weight: bold;
+  display: block;
+}
+
+.list-page ol.timeline li.year hr {
+  margin-left: -30px;
+}
+
+.list-page ol.timeline li.year h2 {
+  margin-left: -30px;
+}
+
+
+.contact-form {
+   width: 100%;
+   max-width: 100%;
+   box-sizing: border-box;
+}
+
+.contact-form label {
+  display: block;
+  margin: 0 0 0.35rem;
+}
+
+.contact-form input[type="text"],
+.contact-form textarea {
+  width: 100%;
+  max-width: 100%;
+  box-sizing: border-box;
+  margin-bottom: 1em;
+  padding: 0.6em;
+  font: inherit;
+}
+
+.contact-form textarea {
+  resize: vertical;
+}
+
+.meta{
+  display:flex;
+  justify-content:flex-end;
+  align-items:center;
+  gap:1em;
+  font-size:0.9em;
+  color:#555;
+  margin-top:-0.5em;
+}
